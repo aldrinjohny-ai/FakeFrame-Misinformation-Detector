@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeFrame - Misinformation Detector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 FakeFrame</h1>
+            <p class="subtitle">Multimodal Misinformation Detector</p>
+            <p class="description">Upload an image and caption to check if they match semantically</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="input-group">
+                    <label for="imageInput">
+                        <span class="label-text">📷 Upload Image</span>
+                    </label>
+                    <input type="file" id="imageInput" accept="image/*" required>
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="captionInput">
+                        <span class="label-text">📝 Enter Caption</span>
+                    </label>
+                    <textarea 
+                        id="captionInput" 
+                        placeholder="Enter the caption or description for this image..."
+                        rows="4"
+                        maxlength="500"
+                        required
+                    ></textarea>
+                    <div class="char-count">
+                        <span id="charCount">0</span> / 500 characters
+                    </div>
+                </div>
+
+                <button id="checkButton" class="check-button">
+                    Check Authenticity
+                </button>
+            </div>
+
+            <div id="loadingSpinner" class="loading-spinner hidden">
+                <div class="spinner"></div>
+                <p>Analyzing with CLIP model...</p>
+            </div>
+
+            <div id="resultSection" class="result-section hidden">
+                <h2>Analysis Result</h2>
+                
+                <div id="resultCard" class="result-card">
+                    <div class="result-header">
+                        <span id="resultIcon" class="result-icon"></span>
+                        <h3 id="resultText" class="result-text"></h3>
+                    </div>
+                    
+                    <div class="result-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Similarity Score:</span>
+                            <span id="similarityScore" class="detail-value"></span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Confidence:</span>
+                            <span id="confidence" class="detail-value"></span>
+                        </div>
+                        
+                        <div class="similarity-bar">
+                            <div id="similarityFill" class="similarity-fill"></div>
+                        </div>
+                        
+                        <p id="explanation" class="explanation"></p>
+                    </div>
+                </div>
+
+                <button id="resetButton" class="reset-button">
+                    Check Another Image
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by OpenAI CLIP ViT-B/32 | Threshold: 0.30</p>
+            <p class="tech-stack">PyTorch • Flask • Transformers</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

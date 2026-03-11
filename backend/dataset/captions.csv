@@ -1,0 +1,5 @@
+image_name,caption,label
+cat.jpg,"A cat sitting on a sofa",1
+cat.jpg,"A fighter jet flying in the sky",0
+flood.jpg,"Flood disaster in Bangladesh",1
+flood.jpg,"Election rally crowd",0
