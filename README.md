@@ -1,3 +1,12 @@
+<img width="1897" height="866" alt="input example " src="https://github.com/user-attachments/assets/b51bb78d-6f7b-410d-bcd6-aa0e00a4535b" />
+<img width="1888" height="870" alt="interface" src="https://github.com/user-attachments/assets/928205ef-a9fe-4c24-91f8-f5022ab13fb0" />
+<img width="1897" height="869" alt="match_result" src="https://github.com/user-attachments/assets/d43ef643-b927-46f2-af8f-5dd0dcb6b9b1" />
+<img width="1902" height="868" alt="mismatch input" src="https://github.com/user-attachments/assets/cd2bf2b9-1fe2-46ca-a27d-f764579a76ad" />
+<img width="1892" height="868" alt="mismatch_result" src="https://github.com/user-attachments/assets/fe1264b1-143c-4f92-96cc-e324047f5b11" />
+
+
+
+
 # 🔍 FakeFrame - Multimodal Misinformation Detector
 
 A complete AI system that detects whether a news image and its caption are semantically consistent using OpenAI CLIP embeddings.
